@@ -75,8 +75,9 @@ $legend = array(
 	'O: Owner account number / Besitzernummer',
 	'E: Calculated checksum / Errechete Prüfziffer',
 	'S: Checksum from IBAN / Prüfziffer aus der IBAN',
-	'V: Whether the iban is valid / Ob die Iban gültig ist',
+	'V: Whether the iban checksum is valid / Ob die Prüfsumme der Iban gültig ist',
 	'L: Whether the iban length is valid / Ob die Länge der Iban gültig ist',
+	'V: Checks whether the iban is valid. Checks the length of iban and the checksum. / Prüft ob die IBAN gültig ist. In der Länge und die Checksum.',
 	'N: Country / Land',
 	'',
 );
@@ -94,8 +95,9 @@ $readings = array(
 	'O' => 'geOwnerNumber',
 	'E' => 'calculateCheckSum',
 	'S' => 'getCheckSumFromGivenIban',
-	'V' => 'isCheckSumValid',
+	'H' => 'isCheckSumValid',
 	'L' => 'checkLengthIsValid',
+	'V' => 'isValid',
 	'N' => 'getCountryName',
 );
 
@@ -104,12 +106,13 @@ $lengths = array(
 	'B' => 10,
 	'A' => 25,
 	'F' => 8,
-	'T' => 8,
-	'O' => 8,
+	'T' => 5,
+	'O' => 4,
 	'E' => 6,
 	'S' => 4,
-	'V' => 4,
+	'H' => 4,
 	'L' => 4,
+	'V' => 4,
 	'N' => 30,
 );
 

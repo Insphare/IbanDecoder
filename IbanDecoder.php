@@ -635,6 +635,15 @@ class IbanDecoder {
 	}
 
 	/**
+	 * Checks whether the iban is valid. Checks the length of iban and the checksum.
+	 *
+	 * @return bool
+	 */
+	public function isValid() {
+		return (true === ($this->isCheckSumValid() && $this->checkLengthIsValid()));
+	}
+
+	/**
 	 * @return bool
 	 */
 	public function checkLengthIsValid() {
